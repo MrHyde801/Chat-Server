@@ -40,7 +40,7 @@ server.listen(PORT, () => {
 })
 
 const messageAllClients = (txtmsg, exclude) => {
-  clients.forEach((client, index) => {
+  clients.forEach((client) => {
     if (client !== exclude) {
       client.write(txtmsg)
       addMessage(txtmsg)
